@@ -1,0 +1,24 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: my-http-app-route
+  namespace: demo
+spec:
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: my-http-gateway
+      namespace: envoy-gateway-system
+  hostnames:
+    - demo.home.com
+
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: web-svc
+          namespace: demo
+          port: 80
+
