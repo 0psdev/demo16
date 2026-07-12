@@ -7,3 +7,5 @@ Complete Setup Guide: Internal NLB + Envoy Gateway + Gateway API on AWS EKS (Pri
 3. Create EnvoyProxy Config NLB (envoy.yaml)
 
 4. Create Gateway (gateway.yaml)
+
+CLIENT -https-> NLB -http-> EnvoyProxy -http-> SVC -http-> POD
