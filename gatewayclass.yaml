@@ -9,7 +9,4 @@ spec:
     kind: EnvoyProxy
     name: nlb-config
     namespace: envoy-gateway-system
-
-
-
-#run this before applying the gatewayclass kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.5.1/standard-install.yaml
+    
