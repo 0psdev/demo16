@@ -2,7 +2,7 @@ Complete Setup Guide: Internal NLB + Envoy Gateway + Gateway API on AWS EKS (Pri
 
 1. helm install eg oci://docker.io/envoyproxy/gateway-helm --version v1.8.0 -n envoy-gateway-system --create-namespace
 
-2. Create GatewayClass (gatewayapi.yaml)
+2. Create GatewayClass (gatewayclass.yaml)
 
 3. Create EnvoyProxy Config NLB (envoy.yaml)
 
